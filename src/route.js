@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./home.js";
+import Portfolio from "./portfolio.js";
 import ButtonAppBar from "./app-bar.js";
+import Purple from '@material-ui/core/colors/purple';
 import "./style.css";
 
 function RouterMain() {
@@ -9,21 +11,13 @@ function RouterMain() {
       <div>
         <Router>
           <div>
-          <ButtonAppBar/>
+          <ButtonAppBar color="secondary"/>
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route path="/portfolio" component={Portfolio} />
             <Route path="/topics" component={Topics} />
           </div>
         </Router>
       </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
   );
 }
 

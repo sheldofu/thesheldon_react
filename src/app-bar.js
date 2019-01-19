@@ -35,7 +35,7 @@ function ButtonAppBar(props) {
             News
           </Typography>
             <Link to="/"><Button color="inherit">Home</Button></Link>
-            <Link to="/about"><Button>About</Button></Link>
+            <Link to="/portfolio"><Button>Portfolio</Button></Link>
             <Link to="/topics"><Button>Topics</Button></Link>
         </Toolbar>
       </AppBar>

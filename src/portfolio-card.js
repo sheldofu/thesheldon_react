@@ -20,7 +20,7 @@ import Port1 from './port_1_kana.png';
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    maxWidth: 300,
   },
   media: {
     height: 0,
