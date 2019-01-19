@@ -1,0 +1,46 @@
+.letter {
+    width: 70px;
+    height: 100px;
+    background: url(./reel.png);
+    display: inline-block;
+    background-position: 0 0px;
+    -moz-background-position: 0 0px;
+    transition: background-position 4s ease;
+}
+
+#letter1 {
+    background-position: 0 0px !important;
+}
+#letter2 {
+    background-position: 0 -100px !important;
+}
+#letter3 {
+    background-position: 0 -200px !important;
+}
+#letter4 {
+    background-position: 0 -300px !important;
+}
+#letter5 {
+    background-position: 0 -400px !important;
+}
+#letter6 {
+    background-position: 0 -500px !important;
+}
+#letter7 {
+    background-position: 0 -600px !important;
+}
+#letter8 {
+    background-position: 0 -700px !important;
+}
+#letter9 {
+    background-position: 0 -800px !important; 
+}
+#letter10 {
+    background-position: 0 -900px !important;
+}
+#letter11 {
+    background-position: 0 -1000px !important;
+}
+#letter12 {
+    background-position: 0 -1100px !important;
+}
