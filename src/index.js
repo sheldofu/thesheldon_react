@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BasicExample from "./route.js"
+import RouterMain from "./route.js"
+import './style.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 ReactDOM.render(
-  <BasicExample />, 
+  <React.Fragment>
+    <CssBaseline />
+    <RouterMain />
+  </React.Fragment>,
   document.querySelector('#app')
 );

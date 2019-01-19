@@ -9,7 +9,8 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-  	contentBase: './dist'
+  	contentBase: './dist',
+    historyApiFallback: true //fixes direct URL GET problem for dev
   },
   module: {
     rules: [
@@ -22,6 +23,19 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: [
+           'file-loader'
+         ]
+      },
+      {
+        test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
       }
     ]
   },
