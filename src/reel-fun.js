@@ -1,5 +1,6 @@
 import React from 'react';
 import SpinLetter from "./spin-letter.js"
+import Paper from '@material-ui/core/Paper';
 
 class ReelFun extends React.Component {
 

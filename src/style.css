@@ -1,8 +1,10 @@
 body {
 	background-color: #eeeeee;
+	font-family: roboto;
 }
 
 .jackpot {
-	margin-top: 40px;
+	width: 700px;
 	text-align: center;
+	margin: 40px auto 0px auto;
 }

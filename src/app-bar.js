@@ -8,6 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
+import PortfolioIcon from '@material-ui/icons/CameraEnhance'
+import Home from "./home.js";
+import About from "./about-me.js";
+import Portfolio from "./portfolio.js";
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 const styles = {
   root: {
@@ -32,14 +40,18 @@ function ButtonAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            News
+            the-sheldon.com
           </Typography>
-            <Link to="/"><Button color="inherit">Home</Button></Link>
-            <Link to="/portfolio"><Button>Portfolio</Button></Link>
-            <Link to="/topics"><Button>Topics</Button></Link>
+            <Link to="/"><IconButton><HomeIcon color="secondary" fontSize="large"/></IconButton></Link>
+            <Link to="/portfolio"><IconButton><PortfolioIcon color="secondary" fontSize="large"/></IconButton></Link>
+            <Link to="/about"><IconButton><PersonIcon color="secondary" fontSize="large" /></IconButton></Link>
         </Toolbar>
       </AppBar>
+      <Route exact path="/" component={Home} />
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/about" component={About} />
     </div>
+
   );
 }
 

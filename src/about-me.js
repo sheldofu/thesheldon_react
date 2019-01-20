@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ReelFun from "./reel-fun.js"
-import Avatar from '@material-ui/core/Avatar';
-import Paper from '@material-ui/core/Paper';
-import Me from './me.jpg'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+import Paper from '@material-ui/core/Paper';
+import Me from './me.jpg'
 
 const styles = theme => ({
   root: {
@@ -28,19 +27,17 @@ const styles = theme => ({
 
 });
 
-class Home extends React.Component {
+class About extends React.Component{
 	render() {
 		const { classes } = this.props;
 		return (
-			<div>
-			    <ReelFun />
-		    </div>
-		);
+							<Avatar alt="Sheldon Marsh" src={Me} className={classes.avatar} />				
+				);
 	}
 }
 
-Home.propTypes = {
+About.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Home);;
+export default withStyles(styles)(About);

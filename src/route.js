@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "./home.js";
-import Portfolio from "./portfolio.js";
 import ButtonAppBar from "./app-bar.js";
 import Purple from '@material-ui/core/colors/purple';
 import "./style.css";
@@ -11,10 +9,7 @@ function RouterMain() {
       <div>
         <Router>
           <div>
-          <ButtonAppBar color="secondary"/>
-            <Route exact path="/" component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/topics" component={Topics} />
+            <ButtonAppBar color="secondary"/>
           </div>
         </Router>
       </div>
