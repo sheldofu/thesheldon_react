@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Paper from '@material-ui/core/Paper';
 import Me from './me.jpg'
+import "./about-me.css"
 
 const styles = theme => ({
   root: {
@@ -31,8 +32,11 @@ class About extends React.Component{
 	render() {
 		const { classes } = this.props;
 		return (
+            <div className="about-container">
 							<Avatar alt="Sheldon Marsh" src={Me} className={classes.avatar} />				
-				);
+				      <Paper>Me</Paper>
+            </div>
+        );
 	}
 }
 

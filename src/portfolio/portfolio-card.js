@@ -14,11 +14,10 @@ import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import Port1 from './port_1_kana.png';
 
 const styles = theme => ({
   card: {
-    maxWidth: 300,
+    maxWidth: 280,
   },
   media: {
     height: 0,
@@ -44,16 +43,15 @@ class PortfolioCard extends React.Component {
 
     return (
       <Card className={classes.card}>
-        <CardHeader
-          title={this.props.title}
-         
-        />
         <CardMedia
           className={classes.media}
           image={this.props.image}
           title={this.props.title}
         />
         <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {this.props.title}
+          </Typography>
           <Typography component="p">
           {this.props.summary} 
           </Typography>

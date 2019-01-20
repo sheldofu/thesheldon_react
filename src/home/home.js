@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import ReelFun from "./reel-fun.js"
 import Avatar from '@material-ui/core/Avatar';
 import Paper from '@material-ui/core/Paper';
-import Me from './me.jpg'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
