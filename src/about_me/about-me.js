@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Paper from '@material-ui/core/Paper';
 import Me from './me.jpg'
+import Link from '@material-ui/core/Link';
 import "./about-me.css"
 
 const styles = theme => ({
@@ -20,7 +21,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
   },
   avatar: {
-		margin: 30,
+		margin: 'auto',
 		width: 300,
 		height: 300,
 		padding: 0
@@ -33,8 +34,17 @@ class About extends React.Component{
 		const { classes } = this.props;
 		return (
             <div className="about-container">
-							<Avatar alt="Sheldon Marsh" src={Me} className={classes.avatar} />				
-				      <Paper>Me</Paper>
+              <div className="about-details">
+                <Avatar alt="Sheldon Marsh" src={Me} className={classes.avatar} />
+              </div>
+              <div className="about-details">
+                <p>If you weren't already blown away by my name spinning on the landing page, and the small collection of aging and incomplete projects on the portfolio page, here's some links to some other underwhelming works:</p>
+                <ul>    
+                  <li><Link href="https://github.com/sheldofu">GitHub</Link></li>
+                  <li><Link href="https://www.linkedin.com/in/sheldon-marsh-61b48555/">LinkedIn</Link></li>
+                  <li><Link href="https://www.the-sheldon.com/senior">Blog</Link></li>
+                </ul>
+              </div>
             </div>
         );
 	}

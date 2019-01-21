@@ -12,8 +12,8 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import LinkIcon from "@material-ui/icons/Link";
+import Link from '@material-ui/core/Link';
 
 const styles = theme => ({
   card: {
@@ -25,10 +25,7 @@ const styles = theme => ({
   },
   actions: {
     display: 'flex',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
+  }
 });
 
 class PortfolioCard extends React.Component {
@@ -57,11 +54,8 @@ class PortfolioCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Share">
-            <ShareIcon />
+          <IconButton aria-label="Link to project">
+            <Link href={this.props.link} target="_blank" rel="noopener"><LinkIcon color="primary" /></Link>
           </IconButton>
         </CardActions>
       </Card>

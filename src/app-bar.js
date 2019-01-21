@@ -14,6 +14,7 @@ import PortfolioIcon from '@material-ui/icons/CameraEnhance'
 import Home from "./home/home.js";
 import About from "./about_me/about-me.js";
 import Portfolio from "./portfolio/portfolio.js";
+import PageTitle from "./page-title.js"
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -36,11 +37,11 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          {/*<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
-          </IconButton>
+          </IconButton>*/}
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            {window.location.pathname}
+            <PageTitle pathName={window.location.pathname}/>
           </Typography>
             <Link to="/"><IconButton><HomeIcon color="secondary" fontSize="large"/></IconButton></Link>
             <Link to="/portfolio"><IconButton><PortfolioIcon color="secondary" fontSize="large"/></IconButton></Link>
