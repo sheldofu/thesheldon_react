@@ -8,15 +8,13 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import HomeIcon from '@material-ui/icons/Home';
-import PersonIcon from '@material-ui/icons/Person';
-import PortfolioIcon from '@material-ui/icons/CameraEnhance'
 import Home from "./home/home.js";
 import About from "./about_me/about-me.js";
 import Portfolio from "./portfolio/portfolio.js";
 import PageTitle from "./page-title.js"
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import NavTabs from './nav-tabs.js'
 
 const styles = {
   root: {
@@ -43,9 +41,7 @@ function ButtonAppBar(props) {
           <Typography variant="h6" color="inherit" className={classes.grow}>
             <PageTitle pathName={window.location.pathname}/>
           </Typography>
-            <Link to="/"><IconButton><HomeIcon color="secondary" fontSize="large"/></IconButton></Link>
-            <Link to="/portfolio"><IconButton><PortfolioIcon color="secondary" fontSize="large"/></IconButton></Link>
-            <Link to="/about"><IconButton><PersonIcon color="secondary" fontSize="large" /></IconButton></Link>
+          <NavTabs />
         </Toolbar>
       </AppBar>
       <Route exact path="/" component={Home} />

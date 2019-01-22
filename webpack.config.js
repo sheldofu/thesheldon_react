@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
   	app:'./src/index.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map', //source-map for prod
   devServer: {
   	contentBase: './dist',
     historyApiFallback: true //fixes direct URL GET problem for dev
@@ -43,7 +43,12 @@ module.exports = {
   	new HtmlWebpackPlugin({
   		template: './src/index.html',
       filename: './index.html'
-  	})
+  	}),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   output: {
     filename: '[name].bundle.js',
