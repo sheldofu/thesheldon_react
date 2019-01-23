@@ -34,7 +34,7 @@ class Home extends React.Component {
 			  			subHeader="sub"
 			  			image={Port2}
 			  			summary="Playing around with a speech recongition API only supported in the latest versions of Google Chrome, Talkboard enables you sketch pictures with your voice...when it feels like it."
-			  			link="http://www.the-sheldon.com/speech_game/index.html"
+			  			link="https://www.the-sheldon.com/speech_game/index.html"
 			  			>
 			  		</PortCard>
 					<PortCard 
@@ -50,7 +50,7 @@ class Home extends React.Component {
 			  			subHeader="sub"
 			  			image={Port4}
 			  			summary="Phaser.js enables this rather rambunctious mole to navigate through a steadily narrowing tunnel. Or it will one day, more of a play around."
-			  			link="http://the-sheldon.com/rambunctious_mole/"
+			  			link="https://the-sheldon.com/rambunctious_mole/"
 			  			>
 			  		</PortCard>
 			    </div>
